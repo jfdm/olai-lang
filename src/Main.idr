@@ -1,14 +1,14 @@
 module Main
 
 import System
-import Ola.Core
+import Olai.Core
 
-import Ola.Pipeline
-import Ola.REPL
-import Ola.Options
+import Olai.Pipeline
+import Olai.REPL
+import Olai.Options
 
 
-mainRug : Ola ()
+mainRug : Olai ()
 mainRug
   = do opts <- getOpts
 
@@ -21,6 +21,6 @@ mainRug
 
 main : IO ()
 main
-  = do Ola.run mainRug
+  = do Olai.run mainRug
 
 -- [ EOF ]

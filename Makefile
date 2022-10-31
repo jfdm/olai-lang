@@ -7,7 +7,7 @@
 #
 # -- [ EOH ]
 
-PROJECT=ola
+PROJECT=olai
 IDRIS2=idris2
 
 TARGETDIR = ${CURDIR}/build/exec
@@ -15,41 +15,41 @@ TARGET = ${TARGETDIR}/${PROJECT}
 
 # [ Core Project Definition ]
 
-.PHONY: ola ola-test-build ola-test-run ola-test-run-re ola-test-update \
-       # ola-bench
+.PHONY: olai olai-test-build olai-test-run olai-test-run-re olai-test-update \
+       # olai-bench
 
-ola:
+olai:
 	$(IDRIS2) --build ${PROJECT}.ipkg
 
 # To be activated once frontend is completed.
 
-ola-test-build:
+olai-test-build:
 	${MAKE} -C tests testbin IDRIS2=$(IDRIS2)
 
-ola-test-run: ola-test-build
+olai-test-run: olai-test-build
 	${MAKE} -C tests test \
 			 IDRIS2=$(IDRIS2) \
 			 PROG_BIN=$(TARGET) \
 			 UPDATE='' \
 			 ONLY=$(ONLY)
 
-ola-test-run-re: ola-test-build
+olai-test-run-re: olai-test-build
 	${MAKE} -C tests test-re \
 			 IDRIS2=$(IDRIS2) \
 			 PROG_BIN=$(TARGET) \
 			 ONLY=$(ONLY)
 
-ola-test-update: ola-test-build
+olai-test-update: olai-test-build
 	${MAKE} -C tests test \
 			 IDRIS2=$(IDRIS2) \
 			 PROG_BIN=$(TARGET) \
 			 THREADS=1 \
 			 ONLY=$(ONLY)
 
-ola-bench: ola ola-test-build
+olai-bench: olai olai-test-build
 	${ECHO} "Todo"
 
-#	$(HYPERFINE) --warmup 10 '${MAKE} ola-test-run'
+#	$(HYPERFINE) --warmup 10 '${MAKE} olai-test-run'
 
 
 # [ Housekeeping ]

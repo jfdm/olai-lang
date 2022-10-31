@@ -6,9 +6,9 @@
 |||
 module Example
 
-import Ola.Core
-import Ola.Terms
-import Ola.Exec
+import Olai.Core
+import Olai.Terms
+import Olai.Exec
 
 ||| An example programme.
 |||

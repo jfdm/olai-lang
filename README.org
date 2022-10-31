@@ -1,34 +1,21 @@
 #+TITLE: README
 
-We are interested in how CHERI-Style Capabilities inter-play with session-types in imperative languages such as Rust/C.
+I am interested in teaching /programming language design, implementation, and theory/ (PLDI).
+As part of this endeavour I try to get student projects to help think about interactive environments covering for students to explore interesting topics in PLDI.
 
-Ola (not that Ola but something else) is a small imperative language with ML-style references written in Idris2 as a intrinsically-scoped/typed EDSL.
-Ola is our experimental language to see how the type-system should work.
+My primary interest is that of functional languages.
+Here I am exploring how to do imperative ones,
 
-Evaluation is through definitional interpretation based on work.
+Olai is a small imperative language with ML-style references written in Idris2 as a intrinsically-scoped/typed EDSL.
+
+Rather than explicit reduction style semantics, evaluation is through definitional interpretation based on work.
 
 #+begin_quote
 Casper Bach Poulsen, Arjen Rouvoet, Andrew Tolmach, Robbert Krebbers, and Eelco Visser. 2017. Intrinsically-typed definitional interpreters for imperative languages. Proc. ACM Program. Lang. 2, POPL, Article 16 (January 2018), 34 pages. https://doi.org/10.1145/3158104
 #+end_quote
 
-This repository should be seen as the reference implementation.
-When realising on CHERIBSD (or another platform with access to capabilities through MUSL), we can use different languages.
-
-* Contributions
-
-* Things to TODO
-
-There are 'minor' TODO's in the source code.
-
-+ Soundness and completeness of Type-Checker.
-+ Can we make it bi-directional... the typing is inspired by bi-directional typing but it would be great if it actually was bi-directional.
-+ How best to add session types, how formal should it be.
-+ How best to add capabilities.
-+ ...
-
 * Note
 
-This is a constant work in progress.
+This is a constant work in progress, and is a snapshot of an academic project that is getting a more functional core: Imperative languages are hard.
 
-The code is not polished.
-
+Thus, the code is not polished and the reason the code has a partial implementation of session-types....
